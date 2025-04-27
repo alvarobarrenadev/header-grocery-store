@@ -1,0 +1,110 @@
+@use '/sass/abstracts/variables' as v;
+@use '/sass/abstracts/mixins' as mx;
+
+.hero {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+        width: 50%;
+        padding-top: 70px;
+
+        h1 {
+            font-family: v.$primary-font;
+            font-size: 70px;
+            line-height: 80px;
+            font-weight: 700;
+            letter-spacing: -2.8px;
+            color: v.$black;
+            margin-bottom: 16px;
+            
+            span {
+                font-weight: 700;
+                letter-spacing: -2.8px;
+                color: v.$orange;
+            }
+        }
+
+    }
+
+    &__description {
+        color: v.$grey;
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 30px;
+        max-width: 75%;
+    }
+
+    &__search {
+        width: 80%;
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 30px;
+        
+        input {
+            flex: 1;
+            background-color: rgba(#d0d0d2, 0.25);
+            border: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            font-family: v.$title-font;
+            font-size: 15px;
+            padding: 15px 25px;
+            
+            &::placeholder {
+                color: v.$grey;
+            }
+        }
+        
+        button {
+            background-color: v.$orange;
+            display: inline-block;
+            width: 40px;
+            border: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+    
+    &__info {
+        @include mx.reset-list;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        gap: 20px;
+        
+        li {
+            width: 45%;
+            color: v.$grey;
+            position: relative;
+            padding-left: 25px;
+
+            &::before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-image: url("../img/icon-check.svg");
+                background-size: 15px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 45%;
+        position: relative;
+        left: -100px;
+        
+        img {
+            max-width: 500px;
+        }
+    }
+}

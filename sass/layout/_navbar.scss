@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mx;
+
+nav.nav-primary {
+    ul {
+        @include mx.reset-list;
+        display: flex;
+        gap: 50px;
+
+        a {
+            color: v.$grey;
+            text-decoration: none;
+            font-weight: 400;
+
+            &.active, 
+            &:hover {
+                color: v.$orange;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 80%;
+                    background-color: orange;
+                    bottom: -10px;
+                    left: 10%;
+                }
+            }
+        }
+    }
+    
+}

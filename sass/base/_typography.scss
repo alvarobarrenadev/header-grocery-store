@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as v;
+
+:where(h1, h2, h3, h4, h5) {
+    font-family: v.$title-font;
+}
+
+a {
+    color: v.$orange;
+    text-decoration: underline;
+}

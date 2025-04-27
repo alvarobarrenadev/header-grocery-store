@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as mx;
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__login {
+        ul {
+            display: flex;
+            align-items: center;
+            @include mx.reset-list;
+            gap: 35px;
+
+            .cart {
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

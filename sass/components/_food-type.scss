@@ -1,0 +1,26 @@
+@use '/sass/abstracts/variables' as v;
+
+.food-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    // margin-top: 30px;
+
+    &__item {
+        &_img {
+            width: 90px;
+        }
+    
+        &_title {
+            color: #403C39;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        &_description {
+            color: v.$grey;
+            font-weight: 400;
+        }
+    }
+}

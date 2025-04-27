@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as mx;
+
+.btn {
+    @include mx.button;
+    text-decoration: none;
+}
