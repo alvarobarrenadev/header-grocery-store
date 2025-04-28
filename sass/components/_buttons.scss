@@ -1,6 +1,12 @@
 @use "../abstracts/mixins" as mx;
+@use "../abstracts/variables" as v;
 
 .btn {
     @include mx.button;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(.9);
 }
